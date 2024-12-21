@@ -14,11 +14,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
-const corsOptions = {
-  origin: ["https://jobportalfrontend-six.vercel.app", "http://localhost:5173"], // Replace with your frontend domains
-  credentials: true, // Allow credentials
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: ["https://jobportalfrontend-six.vercel.app", "http://localhost:5173"], // Replace with your frontend domains
+//   credentials: true, // Allow credentials
+// };
+// app.use(cors(corsOptions));
+
+app.use(cors({
+  origin:"https://jobportalfrontend-six.vercel.app",
+}))
 
 app.use(cors());
 
