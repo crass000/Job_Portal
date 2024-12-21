@@ -12,11 +12,14 @@ dotenv.config({});
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(cookieParser());
-// const corsOptions = {
-//   origin: ["https://jobportalfrontend-six.vercel.app/", "http://localhost:5173"],
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: ["https://jobportalfrontend-six.vercel.app", "http://localhost:5173"], // Replace with your frontend domains
+  credentials: true, // Allow credentials
+};
+app.use(cors(corsOptions));
+
 app.use(cors());
 
 const PORT = process.env.PORT || 3000;
