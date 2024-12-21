@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 const PORT = process.env.PORT || 3000;
 
 //api's
-app.use('/', (req,res)=> {
+app.get("/", (req,res)=> {
   res.status(200).json({msg : 'Welcome from backend'})
 })
 app.use("/api/v1/user", userRoute);
