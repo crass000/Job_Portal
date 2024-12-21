@@ -22,6 +22,7 @@ app.use(cookieParser());
 
 app.use(cors({
   origin:"https://jobportalfrontend-six.vercel.app",
+  credentials:true,
 }))
 
 app.use(cors());
