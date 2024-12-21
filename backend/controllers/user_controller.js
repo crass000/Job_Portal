@@ -113,6 +113,9 @@ export const login = async (req, res) => {
         sameSite: "strict",
       })
       .json({
+        headers:{
+          'Access-Control-Allow-Origin' : "https://jobportalfrontend-six.vercel.app/"
+        },
         message: `Welcome back ${user.fullname}`,
         user,
         success: true,
