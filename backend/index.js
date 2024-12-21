@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 3000;
 
 //api's
 app.use('/', (req,res)=> {
-  console.log("Welcome from backend");
+  res.status(200).json({msg : 'Welcome from backend'})
 })
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
