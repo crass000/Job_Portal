@@ -19,11 +19,13 @@ app.use(cookieParser());
 // Configure CORS
 const corsOptions = {
   origin: [
-    "https://jobportalfrontend-six.vercel.app", // Your deployed frontend
+    "https://jobportalfrontend-db01f4wjd-crass00s-projects.vercel.app", // New frontend URL
+    "https://jobportalfrontend-six.vercel.app", // Original frontend URL
     "http://localhost:5173" // Local development
   ],
   credentials: true, // Allow cookies
 };
+
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
